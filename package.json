@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "document-management-dashboard",
   "private": true,
   "scripts": {
     "build": "turbo run build",

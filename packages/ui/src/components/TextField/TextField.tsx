@@ -25,7 +25,10 @@ const TextField = ({
         className
       )}
     >
-      <label htmlFor={id} className="body2 dark:text-text-dark-03">
+      <label
+        htmlFor={id}
+        className="body2 text-text-light-01 dark:text-text-dark-03"
+      >
         {label}
       </label>
       <div className="flex items-center gap-3 justify-between">

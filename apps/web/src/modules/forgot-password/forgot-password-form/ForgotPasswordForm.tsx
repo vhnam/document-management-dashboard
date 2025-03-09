@@ -6,6 +6,7 @@ const ForgotPasswordForm = () => {
       <h1 className="h1 text-text-light-01 dark:text-text-dark-03 mb-6">
         Forgot your password?
       </h1>
+
       <p className="body2 mb-12 text-text-light-01 dark:text-text-dark-03">
         Enter your email address and we will send you instructions on how to
         reset your password.

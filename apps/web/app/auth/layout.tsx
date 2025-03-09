@@ -25,7 +25,13 @@ const AuthLayout = ({ children }: PropsWithChildren) => {
         </div>
 
         <div className="justify-center flex">
-          <Image src="/folder.webp" alt="Folder" width={342} height={342} />
+          <Image
+            src="/folder.webp"
+            alt="Folder"
+            width={342}
+            height={342}
+            priority
+          />
         </div>
       </div>
       <div className="basis-7/12 bg-default-white dark:bg-text-dark-01 overflow-auto">

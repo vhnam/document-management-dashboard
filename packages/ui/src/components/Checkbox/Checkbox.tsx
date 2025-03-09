@@ -8,7 +8,7 @@ export interface CheckboxProps
 
 const Checkbox = ({ label, className, id, ...props }: CheckboxProps) => {
   const baseClasses = cn(
-    'w-6 h-6 accent-default-brand bg-transparent border-text-light-02 rounded',
+    'peer size-6 appearance-none rounded-sm border border-text-light-02 dark:border-text-dark-03 accent-default-brand checked:appearance-auto',
     className
   );
 

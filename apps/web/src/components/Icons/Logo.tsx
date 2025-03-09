@@ -9,7 +9,7 @@ export interface LogoProps extends SVGProps<SVGSVGElement> {
 const logoVariantStyles = {
   public: {
     bigCircle: 'fill-default-white/20 dark:fill-default-brand/20',
-    smallCircle: 'fill-default-white/20 dark:fill-default-brand',
+    smallCircle: 'fill-default-white dark:fill-default-brand',
   },
   private: {
     bigCircle: 'fill-[#CAD2FF] dark:fill-[#E7EAFF]',

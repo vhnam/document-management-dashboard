@@ -14,7 +14,7 @@ const IconButton = ({
   ...props
 }: IconButtonProps) => {
   const baseClasses =
-    'p-4 shadow-md rounded-full dark:bg-default-white/10 text-text-light-01 dark:text-text-dark-03';
+    'p-4 shadow-02 rounded-full dark:bg-default-white/10 text-text-light-01 dark:text-text-dark-03';
 
   return (
     <button className={cn(baseClasses)} {...props}>

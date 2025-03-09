@@ -4,11 +4,11 @@ import { Logo } from '../Icons';
 
 const Header = () => {
   return (
-    <header className="px-10 py-8 bg-default-white dark:bg-text-dark-02 flex items-center justify-between">
-      <div className="flex items-center gap-32">
+    <header className="px-10 py-8 flex items-center justify-between">
+      <div className="flex items-center gap-[9.75rem]">
         <div className="flex gap-3 items-center">
           <Logo status="private" />
-          <span className="h2 text-default-brand">Storage</span>
+          <span className="h2 font-medium text-default-brand">Storage</span>
         </div>
         <SearchField className="w-[30.1875rem]" placeholder="Search ..." />
       </div>

@@ -66,8 +66,10 @@ const config: Config = {
         regular: tokens.fontWeights['poppins-3'].value,
       },
       boxShadow: {
-        sm: tokens['shadow 1'].value,
-        md: tokens['shadow 2'].value,
+        '01': tokens['shadow 1'].value,
+        '02': tokens['shadow 2'].value,
+        '03': tokens['Shadow 3'].value,
+        dark: tokens['Shadow Dark'].value,
       },
     },
   },

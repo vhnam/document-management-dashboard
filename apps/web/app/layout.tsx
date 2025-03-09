@@ -1,5 +1,4 @@
 import { ThemeProvider } from '../src/providers/ThemeProvider';
-import ThemeToggle from '../src/components/ThemeToggle';
 import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
 

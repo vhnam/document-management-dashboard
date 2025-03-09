@@ -21,7 +21,7 @@ const TextField = ({
   return (
     <div
       className={cn(
-        'flex flex-col gap-2 bg-text-default-white dark:bg-text-dark-02 rounded-md p-4 shadow-sm',
+        'flex flex-col gap-2 bg-text-default-white dark:bg-text-dark-02 rounded-md p-4 shadow-01',
         className
       )}
     >

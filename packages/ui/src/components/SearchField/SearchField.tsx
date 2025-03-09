@@ -12,7 +12,7 @@ const SearchField = ({ className, ...props }: SearchFieldProps) => {
   return (
     <div
       className={cn(
-        'bg-default-white dark:bg-text-dark-01 rounded-full p-4',
+        'bg-default-white dark:bg-text-dark-01 rounded-full p-4 shadow-03',
         className
       )}
     >

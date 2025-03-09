@@ -9,7 +9,7 @@ const AuthLayout = ({ children }: PropsWithChildren) => {
       <div className="basis-5/12 bg-default-brand dark:bg-text-dark-02 py-8 px-16">
         <div className="flex gap-3 items-center mb-24">
           <Logo status="public" />
-          <span className="h2 text-default-white dark:text-default-brand">
+          <span className="h2 font-medium text-default-white dark:text-default-brand">
             Storage
           </span>
         </div>

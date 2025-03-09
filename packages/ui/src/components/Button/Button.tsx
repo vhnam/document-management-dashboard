@@ -36,7 +36,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseClasses =
-    'py-[10px] px-[18px] shadow-md rounded-full button flex gap-2 items-center';
+    'py-[10px] px-[18px] shadow-02 rounded-full button flex gap-2 items-center';
 
   const baseVariant = useMemo(
     () => (disabled ? 'disabled' : variant),

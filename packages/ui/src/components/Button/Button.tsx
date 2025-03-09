@@ -1,5 +1,10 @@
 import cn from 'clsx';
-import { ButtonHTMLAttributes, PropsWithChildren, useMemo } from 'react';
+import {
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+  ReactNode,
+  useMemo,
+} from 'react';
 
 export type ButtonVariant = 'primary' | 'ghost';
 
@@ -7,6 +12,8 @@ export interface ButtonProps
   extends PropsWithChildren,
     ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
+  endAdornment?: ReactNode;
+  startAdornment?: ReactNode;
   variant?: ButtonVariant;
 }
 
@@ -20,13 +27,16 @@ const buttonVariantStyles = {
 };
 
 const Button = ({
-  className,
   children,
+  className,
   disabled = false,
+  endAdornment,
+  startAdornment,
   variant = 'primary',
   ...props
 }: ButtonProps) => {
-  const baseClasses = 'py-[10px] px-[18px] shadow-md rounded-full button';
+  const baseClasses =
+    'py-[10px] px-[18px] shadow-md rounded-full button flex gap-2 items-center';
 
   const baseVariant = useMemo(
     () => (disabled ? 'disabled' : variant),
@@ -39,7 +49,9 @@ const Button = ({
       className={cn(baseClasses, buttonVariantStyles[baseVariant], className)}
       disabled={disabled}
     >
+      {startAdornment}
       {children}
+      {endAdornment}
     </button>
   );
 };

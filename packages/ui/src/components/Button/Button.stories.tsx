@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Button, { ButtonProps } from './Button';
+import { DropdownIcon, UploadIcon } from '../Icons';
 
 const meta = {
   title: 'Components/Button',
@@ -40,5 +41,21 @@ export const DisabledGhost: Story = {
     children: 'Ghost Button',
     variant: 'ghost',
     disabled: true,
+  },
+};
+
+export const StartAdornment: Story = {
+  args: {
+    children: 'Upload',
+    startAdornment: <UploadIcon className="text-white-default" />,
+    variant: 'primary',
+  },
+};
+
+export const EndAdornment: Story = {
+  args: {
+    children: 'Select',
+    endAdornment: <DropdownIcon className="text-white-default" />,
+    variant: 'primary',
   },
 };

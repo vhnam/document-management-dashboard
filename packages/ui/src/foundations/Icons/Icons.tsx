@@ -19,6 +19,7 @@ import {
   OpenedEyeIcon,
   OtherIcon,
   RecentFileIcon,
+  SearchIcon,
   SharedIcon,
   SunIcon,
   TrashIcon,
@@ -65,6 +66,13 @@ const Icons = () => {
           <TrashIcon />
           <UploadIcon />
           <VideoIcon />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-4">
+        <h2 className="h2">Line</h2>
+        <div className="grid grid-cols-12 gap-8">
+          <SearchIcon />
         </div>
       </div>
     </section>

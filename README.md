@@ -47,3 +47,10 @@ This Turborepo has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Biome](https://biomejs.dev/) for code linting and formatting
+
+## Reference
+
+- Ui8.net, [Storage Management Dashboard](https://ui8.net/phuong-designer/products/storage-management-dashboard)
+- Digital.co.jp, [Design System Example Components](https://github.com/digital-go-jp/design-system-example-components)
+- Digital.co.jp, [Design Tokens](https://github.com/digital-go-jp/design-tokens)
+- Digital.co.jp, [Tailwind Theme Plugin](https://github.com/digital-go-jp/tailwind-theme-plugin)

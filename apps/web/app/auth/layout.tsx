@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { PropsWithChildren } from 'react';
-import { Logo } from '../components/Icons';
+
+import { Logo } from '../../src/components/Icons';
 
 const AuthLayout = ({ children }: PropsWithChildren) => {
   return (

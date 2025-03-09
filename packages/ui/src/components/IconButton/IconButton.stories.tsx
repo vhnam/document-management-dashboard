@@ -1,21 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Button, { ButtonProps } from './IconButton';
-import IconButton from './IconButton';
+import { DashboardIcon } from '../Icons';
+import IconButton, { IconButtonProps } from './IconButton';
 
 const meta = {
   title: 'Components/IconButton',
-  component: Button,
+  component: IconButton,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<ButtonProps>;
+} satisfies Meta<IconButtonProps>;
 
 export default meta;
-type Story = StoryObj<ButtonProps>;
+type Story = StoryObj<IconButtonProps>;
 
 export const Example = {
-  render: () => {
-    <IconButton>AHIIH</IconButton>;
-  },
+  render: () => (
+    <IconButton>
+      <DashboardIcon />
+    </IconButton>
+  ),
 };

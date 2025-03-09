@@ -27,6 +27,6 @@
     "lineWidth": 80
   },
   "files": {
-    "ignore": ["apps/web/.next/**/*"]
+    "ignore": ["apps/web/.next/**/*", "**/dist/**/*"]
   }
 }

@@ -1,5 +1,10 @@
-import { Button, Divider } from '@repo/ui/components';
-import Image from 'next/image';
+import {
+  Button,
+  Divider,
+  FacebookIcon,
+  GoogleIcon,
+  IconButton,
+} from '@repo/ui/components';
 import Link from 'next/link';
 
 const LoginPage = () => {
@@ -17,15 +22,13 @@ const LoginPage = () => {
         </Button>
         <div className="flex flex-col gap-8">
           <Divider>or</Divider>
-          <div>
-            <Button>
-              <Image
-                width={24}
-                height={24}
-                src="/facebook.webp"
-                alt="Facebook"
-              />
-            </Button>
+          <div className="flex items-center gap-8 justify-center">
+            <IconButton>
+              <FacebookIcon />
+            </IconButton>
+            <IconButton>
+              <GoogleIcon />
+            </IconButton>
           </div>
           <div className="text-center">
             <p className="body2 text-text-light-01 dark:text-text-dark-03">

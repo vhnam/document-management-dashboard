@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import cn from 'clsx';
 import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
 
-export interface ButtonProps
+export interface IconButtonProps
   extends PropsWithChildren,
     ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
@@ -12,10 +12,15 @@ const IconButton = ({
   children,
   disabled = false,
   ...props
-}: ButtonProps) => {
-  const baseClasses = 'p-[10px] shadow-md rounded-full button';
+}: IconButtonProps) => {
+  const baseClasses =
+    'p-4 shadow-md rounded-full dark:bg-default-white/10 text-text-light-01 dark:text-text-dark-03';
 
-  return <button {...props}>{children}</button>;
+  return (
+    <button className={cn(baseClasses)} {...props}>
+      {children}
+    </button>
+  );
 };
 
 export default IconButton;

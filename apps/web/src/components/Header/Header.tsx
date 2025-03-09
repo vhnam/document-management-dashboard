@@ -1,6 +1,7 @@
-import { Button, SearchField, UploadIcon } from '@repo/ui/components';
+import { Button, UploadIcon } from '@repo/ui/components';
 import Image from 'next/image';
 import { Logo } from '../Icons';
+import { SearchField } from '../SearchField';
 
 const Header = () => {
   return (

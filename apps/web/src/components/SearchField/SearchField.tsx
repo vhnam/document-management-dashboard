@@ -1,8 +1,6 @@
-'use client';
-
-import { InputHTMLAttributes, useState } from 'react';
-import { SearchIcon } from '../Icons';
-import { cn } from '../../utils';
+import { SearchIcon } from '@repo/ui/components';
+import { cn } from '@repo/ui/utils';
+import { InputHTMLAttributes } from 'react';
 
 export interface SearchFieldProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {}

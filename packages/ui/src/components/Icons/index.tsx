@@ -23,5 +23,6 @@ export { default as SearchIcon } from './Search';
 export { default as SharedIcon } from './Shared';
 export { default as SunIcon } from './Sun';
 export { default as TrashIcon } from './Trash';
+export { default as TwitterIcon } from './Twitter';
 export { default as UploadIcon } from './Upload';
 export { default as VideoIcon } from './Video';

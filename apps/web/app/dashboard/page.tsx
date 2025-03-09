@@ -1,5 +1,6 @@
 import AvailableStorage from '../../src/modules/dashboard/available-storage';
 import ContactList from '../../src/modules/dashboard/contact-list';
+import InviteFriend from '../../src/modules/dashboard/invite-friend';
 
 const HomePage = () => {
   return (
@@ -7,8 +8,9 @@ const HomePage = () => {
       <div>
         <AvailableStorage />
       </div>
-      <div>
+      <div className="flex flex-col gap-9">
         <ContactList />
+        <InviteFriend />
       </div>
     </div>
   );

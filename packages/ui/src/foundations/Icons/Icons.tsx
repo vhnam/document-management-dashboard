@@ -24,6 +24,7 @@ import {
   SharedIcon,
   SunIcon,
   TrashIcon,
+  TwitterIcon,
   UploadIcon,
   VideoIcon,
 } from '../../components/Icons';
@@ -38,6 +39,7 @@ const Icons = () => {
         <div className="grid grid-cols-12 gap-8">
           <FacebookIcon />
           <GoogleIcon />
+          <TwitterIcon />
         </div>
       </div>
 

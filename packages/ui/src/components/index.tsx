@@ -4,5 +4,4 @@ export * from './Divider';
 export * from './IconButton';
 export * from './Icons';
 export * from './PasswordField';
-export * from './SearchField';
 export * from './TextField';

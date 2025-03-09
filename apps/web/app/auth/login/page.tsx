@@ -1,5 +1,6 @@
 import {
   Button,
+  Checkbox,
   Divider,
   FacebookIcon,
   GoogleIcon,
@@ -12,12 +13,13 @@ const LoginPage = () => {
     <div className="py-[7.5rem] px-[8.75rem]">
       <div>
         <h1 className="h1 text-text-light-01 dark:text-text-dark-03">Login</h1>
-        <div>
+        <div className="flex items-center justify-between mb-12">
+          <Checkbox id="login__remember-me__checkbox" label="Remember me" />
           <Link href="#" className="text-default-brand subtitle2">
             Forgot Password?
           </Link>
         </div>
-        <Button type="submit" className="w-full py-6">
+        <Button type="submit" className="w-full h-16 py-6 mb-12">
           Login
         </Button>
         <div className="flex flex-col gap-8">

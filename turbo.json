@@ -16,6 +16,13 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "check": {},
+    "format": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
     }
   }
 }

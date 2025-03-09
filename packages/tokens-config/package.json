@@ -1,0 +1,33 @@
+{
+  "name": "@repo/tokens-config",
+  "version": "0.0.0",
+  "private": true,
+  "style": "./dist/tokens.css",
+  "main": "./dist/tokens.js",
+  "typings": "./dist/tokens.d.ts",
+  "type": "module",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    "./tokens": "./dist/tokens.js"
+  },
+  "scripts": {
+    "clean": "rm -rf dist node_modules",
+    "check-types": "tsc --noEmit",
+    "build": "tsx src/style-dictionary/transform.ts"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@tokens-studio/sd-transforms": "^1.2.9",
+    "@tsconfig/node20": "^20.1.4",
+    "style-dictionary": "^4.3.3",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.3.3"
+  }
+}

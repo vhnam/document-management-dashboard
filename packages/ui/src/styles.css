@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Poppins, sans-serif;
+  }
+}
+
+@layer components {
+  .h1 {
+    @apply text-46 leading-56 font-bold;
+  }
+
+  .h2 {
+    @apply text-24 leading-36 font-bold;
+  }
+
+  .h3 {
+    @apply text-20 leading-26 font-medium;
+  }
+
+  .h4 {
+    @apply text-18 leading-20 font-medium;
+  }
+
+  .h5 {
+    @apply text-16 leading-24 font-semibold;
+  }
+
+  .subtitle1 {
+    @apply text-16 leading-24 font-medium;
+  }
+
+  .subtitle2 {
+    @apply text-14 leading-20 font-semibold;
+  }
+
+  .body1 {
+    @apply text-16 leading-24 font-regular;
+  }
+
+  .body2 {
+    @apply text-14 leading-20 font-regular;
+  }
+
+  .button {
+    @apply text-15 leading-20 font-medium;
+  }
+
+  .caption {
+    @apply text-12 leading-16 font-regular;
+  }
+
+  .overline {
+    @apply text-10 leading-14 font-regular !no-underline;
+  }
+}

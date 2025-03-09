@@ -1,0 +1,45 @@
+{
+  "source": ["src/assets/tokens.json"],
+  "platforms": {
+    "css": {
+      "preprocessors": ["tokens-studio"],
+      "transformGroup": "tokens-studio",
+      "transforms": ["size/pxToRem", "shadow/css/shorthand", "name/kebab"],
+      "buildPath": "dist/",
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables",
+          "filter": "tokens-filter",
+          "options": {
+            "outputReferences": true
+          }
+        }
+      ]
+    },
+    "ts": {
+      "preprocessors": ["tokens-studio"],
+      "transformGroup": "tokens-studio",
+      "transforms": ["size/pxToRem", "shadow/css/shorthand", "name/pascal"],
+      "buildPath": "dist/",
+      "files": [
+        {
+          "format": "javascript/esm",
+          "destination": "tokens.js",
+          "filter": "tokens-filter",
+          "options": {
+            "outputReferences": true
+          }
+        },
+        {
+          "format": "typescript/module-declarations",
+          "destination": "tokens.d.ts",
+          "filter": "tokens-filter",
+          "options": {
+            "outputReferences": true
+          }
+        }
+      ]
+    }
+  }
+}

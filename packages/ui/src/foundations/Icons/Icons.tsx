@@ -2,6 +2,7 @@ import {
   AddUserIcon,
   CameraIcon,
   CategoryIcon,
+  ClosedEyeIcon,
   CloseIcon,
   DashboardIcon,
   DropdownIcon,
@@ -15,6 +16,7 @@ import {
   ListIcon,
   MoonIcon,
   NotificationIcon,
+  OpenedEyeIcon,
   OtherIcon,
   RecentFileIcon,
   SharedIcon,
@@ -43,6 +45,7 @@ const Icons = () => {
           <AddUserIcon />
           <CameraIcon />
           <CategoryIcon />
+          <ClosedEyeIcon />
           <CloseIcon />
           <DashboardIcon />
           <DropdownIcon />
@@ -54,6 +57,7 @@ const Icons = () => {
           <ListIcon />
           <MoonIcon />
           <NotificationIcon />
+          <OpenedEyeIcon />
           <OtherIcon />
           <RecentFileIcon />
           <SharedIcon />

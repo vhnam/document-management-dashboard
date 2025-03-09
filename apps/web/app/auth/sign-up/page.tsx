@@ -10,12 +10,12 @@ import {
 } from '@repo/ui/components';
 import Link from 'next/link';
 
-const LoginPage = () => {
+const SignUpPage = () => {
   return (
     <div className="py-[7.5rem] px-[8.75rem]">
       <div>
         <h1 className="h1 text-text-light-01 dark:text-text-dark-03 mb-12">
-          Login
+          Create Account
         </h1>
 
         <div className="flex flex-col gap-8 mb-9">
@@ -23,32 +23,31 @@ const LoginPage = () => {
             label="Username"
             name="username"
             placeholder="Enter your Username"
-            id="login__username__textfield"
+            id="signup__username__textfield"
           />
           <TextField
             label="Email"
             name="email"
             type="email"
             placeholder="Enter your Email"
-            id="login__email__textfield"
+            id="signup__email__textfield"
           />
           <PasswordField
             label="Password"
             name="password"
             placeholder="Enter Password"
-            id="login__password__textfield"
+            id="signup__password__textfield"
+          />
+          <PasswordField
+            label="Confirm Password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            id="signup__confirm-password__textfield"
           />
         </div>
 
-        <div className="flex items-center justify-between mb-12">
-          <Checkbox id="login__remember-me__checkbox" label="Remember me" />
-          <Link href="#" className="text-default-brand subtitle2">
-            Forgot Password?
-          </Link>
-        </div>
-
         <Button type="submit" className="w-full h-16 py-6 mb-12">
-          Login
+          Create Account
         </Button>
 
         <div className="flex flex-col gap-8">
@@ -65,9 +64,9 @@ const LoginPage = () => {
 
           <div className="text-center">
             <p className="body2 text-text-light-01 dark:text-text-dark-03">
-              Don't have an account?&nbsp;
-              <Link href="/auth/sign-up" className="text-default-brand">
-                Create Account
+              Already have an account?&nbsp;
+              <Link href="/auth/login" className="text-default-brand">
+                Login
               </Link>
             </p>
           </div>
@@ -77,4 +76,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignUpPage;

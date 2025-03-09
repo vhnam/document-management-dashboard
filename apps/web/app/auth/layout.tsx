@@ -28,7 +28,7 @@ const AuthLayout = ({ children }: PropsWithChildren) => {
           <Image src="/folder.webp" alt="Folder" width={342} height={342} />
         </div>
       </div>
-      <div className="basis-7/12 bg-default-white dark:bg-text-dark-01">
+      <div className="basis-7/12 bg-default-white dark:bg-text-dark-01 overflow-auto">
         {children}
       </div>
     </div>

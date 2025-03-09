@@ -42,7 +42,10 @@ const LoginPage = () => {
 
         <div className="flex items-center justify-between mb-12">
           <Checkbox id="login__remember-me__checkbox" label="Remember me" />
-          <Link href="#" className="text-default-brand subtitle2">
+          <Link
+            href="/auth/forgot-password"
+            className="text-default-brand subtitle2"
+          >
             Forgot Password?
           </Link>
         </div>

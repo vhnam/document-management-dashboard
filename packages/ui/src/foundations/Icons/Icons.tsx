@@ -1,4 +1,5 @@
 import {
+  AddIcon,
   AddUserIcon,
   CameraIcon,
   CategoryIcon,
@@ -72,6 +73,7 @@ const Icons = () => {
       <div className="flex flex-col gap-4">
         <h2 className="h2">Line</h2>
         <div className="grid grid-cols-12 gap-8">
+          <AddIcon />
           <SearchIcon />
         </div>
       </div>

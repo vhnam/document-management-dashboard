@@ -1,3 +1,4 @@
+export { default as AddIcon } from './Add';
 export { default as AddUserIcon } from './AddUser';
 export { default as CameraIcon } from './Camera';
 export { default as CategoryIcon } from './Category';

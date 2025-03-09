@@ -1,9 +1,8 @@
 'use client';
 
 import { InputHTMLAttributes, useState } from 'react';
-import cn from 'clsx';
-import { TextField, TextFieldProps } from '../TextField';
 import { SearchIcon } from '../Icons';
+import { cn } from '../../utils';
 
 export interface SearchFieldProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {}

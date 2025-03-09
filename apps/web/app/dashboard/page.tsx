@@ -1,4 +1,5 @@
 import AvailableStorage from '../../src/modules/dashboard/available-storage';
+import ContactList from '../../src/modules/dashboard/contact-list';
 
 const HomePage = () => {
   return (
@@ -6,7 +7,9 @@ const HomePage = () => {
       <div>
         <AvailableStorage />
       </div>
-      <div>List</div>
+      <div>
+        <ContactList />
+      </div>
     </div>
   );
 };

@@ -1,10 +1,10 @@
-import cn from 'clsx';
 import {
   ButtonHTMLAttributes,
   PropsWithChildren,
   ReactNode,
   useMemo,
 } from 'react';
+import { cn } from '../../utils';
 
 export type ButtonVariant = 'primary' | 'ghost';
 

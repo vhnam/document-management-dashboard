@@ -1,5 +1,5 @@
-import cn from 'clsx';
 import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+import { cn } from '../../utils';
 
 export interface IconButtonProps
   extends PropsWithChildren,
@@ -14,10 +14,10 @@ const IconButton = ({
   ...props
 }: IconButtonProps) => {
   const baseClasses =
-    'p-4 shadow-02 rounded-full dark:bg-default-white/10 text-text-light-01 dark:text-text-dark-03';
+    'p-4 shadow-02 flex items-center justify-center rounded-full text-text-light-01 dark:text-text-dark-03';
 
   return (
-    <button className={cn(baseClasses)} {...props}>
+    <button className={cn(baseClasses, className)} {...props}>
       {children}
     </button>
   );

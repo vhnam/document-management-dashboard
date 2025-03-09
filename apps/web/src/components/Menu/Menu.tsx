@@ -1,5 +1,5 @@
+import { cn } from '@repo/ui/utils';
 import { PropsWithChildren, ReactNode } from 'react';
-import cn from 'clsx';
 
 export interface MenuProps extends PropsWithChildren {
   active?: boolean;

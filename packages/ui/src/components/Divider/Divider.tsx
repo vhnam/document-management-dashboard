@@ -1,5 +1,5 @@
-import cn from 'clsx';
 import { PropsWithChildren } from 'react';
+import { cn } from '../../utils';
 
 export interface DividerProps extends PropsWithChildren {
   className?: string;

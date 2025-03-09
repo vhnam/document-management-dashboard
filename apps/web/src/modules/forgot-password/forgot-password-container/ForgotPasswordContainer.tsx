@@ -29,10 +29,10 @@ const ForgotPasswordContainer = () => {
           <Divider>or</Divider>
 
           <div className="flex items-center gap-8 justify-center">
-            <IconButton>
+            <IconButton className="dark:bg-default-white/10">
               <FacebookIcon />
             </IconButton>
-            <IconButton>
+            <IconButton className="dark:bg-default-white/10">
               <GoogleIcon />
             </IconButton>
           </div>

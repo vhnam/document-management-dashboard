@@ -13,7 +13,9 @@ const Color = ({ colorHex }: ColorProps) => {
       >
         &nbsp;
       </div>
-      <div className="text-text-light-01 bg-default-white caption font-bold px-4 py-3 text-center">{colorHex}</div>
+      <div className="text-text-light-01 bg-default-white caption font-bold px-4 py-3 text-center">
+        {colorHex}
+      </div>
     </div>
   );
 };

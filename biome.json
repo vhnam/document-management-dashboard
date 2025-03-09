@@ -18,5 +18,15 @@
       "trailingComma": "es5",
       "semicolons": "always"
     }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80
+  },
+  "files": {
+    "ignore": ["apps/web/.next/**/*"]
   }
 }

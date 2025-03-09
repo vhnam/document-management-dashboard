@@ -19,7 +19,12 @@ const LoginPage = () => {
           <Divider>or</Divider>
           <div>
             <Button>
-              <Image width={24} height={24} src="/facebook.webp" alt="Facebook" />
+              <Image
+                width={24}
+                height={24}
+                src="/facebook.webp"
+                alt="Facebook"
+              />
             </Button>
           </div>
           <div className="text-center">

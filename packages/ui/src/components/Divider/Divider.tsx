@@ -13,7 +13,11 @@ const Divider = ({ children, className }: DividerProps) => {
         className
       )}
     >
-      {children && <span className="px-4 text-text-light-01 dark:text-text-dark-03 body1">{children}</span>}
+      {children && (
+        <span className="px-4 text-text-light-01 dark:text-text-dark-03 body1">
+          {children}
+        </span>
+      )}
     </div>
   );
 };

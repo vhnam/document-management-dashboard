@@ -21,9 +21,22 @@ export const Logo = ({ status = 'private', ...props }: LogoProps) => {
   const logoStyle = useMemo(() => logoVariantStyles[status], [status]);
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={53} height={52} fill="none" {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={53}
+      height={52}
+      fill="none"
+      {...props}
+    >
       <rect width={48} height={48} rx={24} className={logoStyle.bigCircle} />
-      <rect width={32} height={32} x={21} y={20} className={logoStyle.smallCircle} rx={16} />
+      <rect
+        width={32}
+        height={32}
+        x={21}
+        y={20}
+        className={logoStyle.smallCircle}
+        rx={16}
+      />
     </svg>
   );
 };

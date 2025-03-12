@@ -5,6 +5,7 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
+    "./common": "./src/common.utils.ts",
     "./date": "./src/date.utils.ts",
     "./ui": "./src/ui.utils.ts"
   },
@@ -15,7 +16,9 @@
   },
   "devDependencies": {
     "@repo/typescript-config": "*",
+    "@types/lodash": "^4.17.16",
     "dayjs": "^1.11.13",
+    "lodash": "^4.17.21",
     "typescript": "5.8.2"
   }
 }

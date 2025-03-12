@@ -1,7 +1,7 @@
-import Toolbar from '../../src/components/Toolbar';
+import TopAppBar from '../../src/components/TopAppBar';
 
 const VideosPage = () => {
-  return <Toolbar name="Videos, Audios" />;
+  return <TopAppBar name="Videos, Audios" />;
 };
 
 export default VideosPage;

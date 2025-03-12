@@ -19,6 +19,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@repo/mocks": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
     "@repo/utils": "*",

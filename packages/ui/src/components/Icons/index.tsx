@@ -1,5 +1,6 @@
 export { default as AddIcon } from './Add';
 export { default as AddUserIcon } from './AddUser';
+export { default as ArrowUpIcon } from './ArrowUp';
 export { default as CameraIcon } from './Camera';
 export { default as CategoryIcon } from './Category';
 export { default as ClosedEyeIcon } from './ClosedEye';
@@ -18,6 +19,7 @@ export { default as MoonIcon } from './Moon';
 export { default as NotificationIcon } from './Notification';
 export { default as OpenedEyeIcon } from './OpenedEye';
 export { default as OtherIcon } from './Other';
+export { default as OptionIcon } from './Option';
 export { default as RecentFileIcon } from './RecentFile';
 export { default as SearchIcon } from './Search';
 export { default as SharedIcon } from './Shared';

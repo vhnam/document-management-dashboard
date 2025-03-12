@@ -1,13 +1,6 @@
 import { Divider } from "@repo/ui/components";
-import { formatDateTime, isSame } from "@repo/utils/date";
 import { FolderProps } from "./Folder";
-
-const formatLastUpdated = (date: Date): string => {
-  if (isSame(date, new Date(), "year")) {
-    return formatDateTime(date, "h:mm A MMM D");
-  }
-  return formatDateTime(date, "h:mm A MMM D YYYY");
-};
+import { formatLastUpdated } from "../../utils/date.utils";
 
 const FolderContent = ({
   fileSize,

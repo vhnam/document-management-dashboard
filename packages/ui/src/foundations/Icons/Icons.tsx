@@ -1,6 +1,7 @@
 import {
   AddIcon,
   AddUserIcon,
+  ArrowUpIcon,
   CameraIcon,
   CategoryIcon,
   ClosedEyeIcon,
@@ -28,6 +29,7 @@ import {
   UploadIcon,
   VideoIcon,
 } from '../../components/Icons';
+import OptionIcon from '../../components/Icons/Option';
 
 const Icons = () => {
   return (
@@ -76,6 +78,8 @@ const Icons = () => {
         <h2 className="h2">Line</h2>
         <div className="grid grid-cols-12 gap-8">
           <AddIcon />
+          <ArrowUpIcon />
+          <OptionIcon />
           <SearchIcon />
         </div>
       </div>

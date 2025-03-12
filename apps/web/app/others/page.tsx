@@ -1,7 +1,7 @@
-import Toolbar from '../../src/components/Toolbar';
+import TopAppBar from '../../src/components/TopAppBar';
 
 const OthersPage = () => {
-  return <Toolbar name="Others" />;
+  return <TopAppBar name="Others" />;
 };
 
 export default OthersPage;

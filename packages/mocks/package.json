@@ -1,0 +1,26 @@
+{
+  "name": "@repo/mocks",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    "./documents": "./dist/documents.json",
+    "./images": "./dist/images.json"
+  },
+  "scripts": {
+    "build": "npx tsx src/index.ts",
+    "lint": "biome check .",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "@repo/typescript-config": "*",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.3"
+  }
+}

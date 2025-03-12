@@ -1,0 +1,21 @@
+{
+  "name": "@repo/utils",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    "./date": "./src/date.utils.ts",
+    "./ui": "./src/ui.utils.ts"
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "format": "biome format .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "dayjs": "^1.11.13",
+    "typescript": "5.8.2"
+  }
+}

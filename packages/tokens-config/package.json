@@ -21,7 +21,6 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@tokens-studio/sd-transforms": "^1.2.9",
     "@tsconfig/node20": "^20.1.4",

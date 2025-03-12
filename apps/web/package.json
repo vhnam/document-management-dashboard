@@ -21,6 +21,7 @@
   "devDependencies": {
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/utils": "*",
     "@types/d3": "^7.4.3",
     "@types/node": "^22.13.9",
     "@types/react": "19.0.10",

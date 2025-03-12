@@ -4,8 +4,7 @@
   "private": true,
   "exports": {
     "./components": "./src/components/index.tsx",
-    "./styles": "./src/styles.css",
-    "./utils": "./src/utils/index.ts"
+    "./styles": "./src/styles.css"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -18,6 +17,7 @@
   "devDependencies": {
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/utils": "*",
     "@storybook/addon-essentials": "^8.6.4",
     "@storybook/addon-interactions": "^8.6.4",
     "@storybook/addon-links": "^8.6.4",

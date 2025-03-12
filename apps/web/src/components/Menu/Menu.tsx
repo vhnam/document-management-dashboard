@@ -1,4 +1,4 @@
-import { cn } from '@repo/ui/utils';
+import { cn } from '@repo/utils/ui';
 import Link from 'next/link';
 import { PropsWithChildren, ReactNode } from 'react';
 

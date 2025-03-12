@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, ReactNode } from 'react';
-import { cn } from '../../utils';
+import { cn } from '@repo/utils/ui';
 
 export interface TextFieldProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {

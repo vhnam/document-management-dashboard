@@ -1,5 +1,5 @@
 import { SearchIcon } from '@repo/ui/components';
-import { cn } from '@repo/ui/utils';
+import { cn } from '@repo/utils/ui';
 import { InputHTMLAttributes } from 'react';
 
 export interface SearchFieldProps

@@ -4,7 +4,7 @@ import {
   ReactNode,
   useMemo,
 } from 'react';
-import { cn } from '../../utils';
+import { cn } from '@repo/utils/ui';
 
 export type ButtonVariant = 'primary' | 'ghost';
 

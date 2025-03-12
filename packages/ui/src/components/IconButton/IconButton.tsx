@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
-import { cn } from '../../utils';
+import { cn } from '@repo/utils/ui';
 
 export interface IconButtonProps
   extends PropsWithChildren,

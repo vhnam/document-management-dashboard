@@ -1,5 +1,5 @@
 import { CategoryIcon, IconButton, ListIcon } from '@repo/ui/components';
-import { cn } from '@repo/ui/utils';
+import { cn } from '@repo/utils/ui';
 
 const DocumentsPage = () => {
   return (

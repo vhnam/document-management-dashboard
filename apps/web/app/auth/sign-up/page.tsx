@@ -9,6 +9,7 @@ import {
   TextField,
 } from '@repo/ui/components';
 import Link from 'next/link';
+import { Routes } from '../../../src/enums/Routes';
 
 const SignUpPage = () => {
   return (
@@ -65,7 +66,7 @@ const SignUpPage = () => {
           <div className="text-center">
             <p className="body2 text-text-light-01 dark:text-text-dark-03">
               Already have an account?&nbsp;
-              <Link href="/auth/login" className="text-default-brand">
+              <Link href={Routes.LOGIN} className="text-default-brand">
                 Login
               </Link>
             </p>

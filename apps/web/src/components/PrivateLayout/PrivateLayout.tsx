@@ -1,10 +1,10 @@
 import { PropsWithChildren } from 'react';
 import Header from '../Header';
 import Sidebar from '../Sidebar';
-import type { ActiveMenuType } from '../Sidebar/Sidebar';
+import type { SidebarMenuType } from '../Sidebar/Sidebar';
 
 export interface PrivateLayoutProps extends PropsWithChildren {
-  activeMenu: ActiveMenuType;
+  activeMenu: SidebarMenuType;
 }
 
 const PrivateLayout = ({ activeMenu, children }: PrivateLayoutProps) => {

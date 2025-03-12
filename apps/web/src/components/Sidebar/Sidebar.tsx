@@ -7,8 +7,9 @@ import {
 } from '@repo/ui/components';
 import Image from 'next/image';
 import Menu from '../Menu';
+import { Routes } from '../../enums/Routes';
 
-export type ActiveMenuType =
+export type SidebarMenuType =
   | 'dashboard'
   | 'documents'
   | 'images'
@@ -16,18 +17,18 @@ export type ActiveMenuType =
   | 'others';
 
 export interface SidebarProps {
-  activeMenu: ActiveMenuType;
+  activeMenu: SidebarMenuType;
 }
 
 const Sidebar = ({ activeMenu }: SidebarProps) => {
   return (
-    <aside className="basis-[20rem] flex flex-col justify-between pb-10">
-      <ul className="px-9 flex flex-col gap-5 w-full">
+    <aside className="basis-[20rem] flex flex-col justify-between pb-6">
+      <ul className="px-9 flex flex-col gap-3 w-full">
         <li>
           <Menu
             active={activeMenu === 'dashboard'}
             icon={<DashboardIcon />}
-            href="/dashboard"
+            href={Routes.DASHBOARD}
           >
             Dashboard
           </Menu>
@@ -36,23 +37,35 @@ const Sidebar = ({ activeMenu }: SidebarProps) => {
           <Menu
             active={activeMenu === 'documents'}
             icon={<FolderIcon />}
-            href="/documents"
+            href={Routes.DOCUMENTS}
           >
             Documents
           </Menu>
         </li>
         <li>
-          <Menu active={activeMenu === 'images'} icon={<ImageIcon />}>
+          <Menu
+            active={activeMenu === 'images'}
+            icon={<ImageIcon />}
+            href={Routes.IMAGES}
+          >
             Images
           </Menu>
         </li>
         <li>
-          <Menu active={activeMenu === 'videos'} icon={<VideoIcon />}>
+          <Menu
+            active={activeMenu === 'videos'}
+            icon={<VideoIcon />}
+            href={Routes.VIDEOS}
+          >
             Video, Audio
           </Menu>
         </li>
         <li>
-          <Menu active={activeMenu === 'others'} icon={<OtherIcon />}>
+          <Menu
+            active={activeMenu === 'others'}
+            icon={<OtherIcon />}
+            href={Routes.OTHERS}
+          >
             Others
           </Menu>
         </li>

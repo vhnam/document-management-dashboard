@@ -9,6 +9,7 @@ import {
   TextField,
 } from '@repo/ui/components';
 import Link from 'next/link';
+import { Routes } from '../../../src/enums/Routes';
 
 const LoginPage = () => {
   return (
@@ -43,7 +44,7 @@ const LoginPage = () => {
         <div className="flex items-center justify-between mb-12">
           <Checkbox id="login__remember-me__checkbox" label="Remember me" />
           <Link
-            href="/auth/forgot-password"
+            href={Routes.FORGOT_PASSWORD}
             className="text-default-brand subtitle2"
           >
             Forgot Password?
@@ -69,7 +70,7 @@ const LoginPage = () => {
           <div className="text-center">
             <p className="body2 text-text-light-01 dark:text-text-dark-03">
               Don't have an account?&nbsp;
-              <Link href="/auth/sign-up" className="text-default-brand">
+              <Link href={Routes.SIGN_UP} className="text-default-brand">
                 Create Account
               </Link>
             </p>

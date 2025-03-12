@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import ForgotPasswordForm from '../forgot-password-form';
 import ForgotPasswordSuccess from '../forgot-password-success';
+import { Routes } from '../../../enums/Routes';
 
 const ForgotPasswordContainer = () => {
   const searchParams = useSearchParams();
@@ -40,7 +41,7 @@ const ForgotPasswordContainer = () => {
           <div className="text-center">
             <p className="body2 text-text-light-01 dark:text-text-dark-03">
               Don't have an account?&nbsp;
-              <Link href="/auth/sign-up" className="text-default-brand">
+              <Link href={Routes.SIGN_UP} className="text-default-brand">
                 Create Account
               </Link>
             </p>

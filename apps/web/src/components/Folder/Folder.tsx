@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { ReactNode } from "react";
-import FolderShape from "./FolderShape";
-import FolderContent from "./FolderContent";
+import { ReactNode } from 'react';
+import FolderShape from './FolderShape';
+import FolderContent from './FolderContent';
 
 const FOLDER_DIMENSIONS = {
   width: 226,

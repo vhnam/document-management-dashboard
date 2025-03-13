@@ -1,4 +1,4 @@
-import dayjs from "dayjs";
+import dayjs from 'dayjs';
 
 export const formatDateTime = (date: Date, template?: string) =>
   dayjs(date).format(template);

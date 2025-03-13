@@ -4,10 +4,10 @@ import {
   CategoryIcon,
   IconButton,
   ListIcon,
-} from "@repo/ui/components";
-import { cn } from "@repo/utils/ui";
+} from '@repo/ui/components';
+import { cn } from '@repo/utils/ui';
 
-export type SortField = "name";
+export type SortField = 'name';
 
 export interface TopAppBarProps {
   name: string;
@@ -20,7 +20,7 @@ export interface TopAppBarProps {
 const TopAppBar = ({
   name,
   onSort,
-  sortField = "name",
+  sortField = 'name',
   isAscending = true,
   totalItems = 0,
 }: TopAppBarProps) => {
@@ -38,16 +38,16 @@ const TopAppBar = ({
         <div className="flex items-center gap-5">
           <Button
             variant="ghost"
-            onClick={() => onSort?.("name")}
+            onClick={() => onSort?.('name')}
             endAdornment={
               <ArrowUpIcon
                 width={22}
                 height={22}
                 className={cn(
-                  "text-text-light-01 dark:text-text-dark-03",
-                  sortField === "name" && {
-                    "rotate-180": !isAscending,
-                    "transition-transform duration-200": true,
+                  'text-text-light-01 dark:text-text-dark-03',
+                  sortField === 'name' && {
+                    'rotate-180': !isAscending,
+                    'transition-transform duration-200': true,
                   }
                 )}
               />
@@ -56,22 +56,22 @@ const TopAppBar = ({
             Name
           </Button>
           <IconButton
-            className={cn("bg-default-white dark:bg-text-dark-02 size-11 p-0")}
+            className={cn('bg-default-white dark:bg-text-dark-02 size-11 p-0')}
           >
             <ListIcon
               width={22}
               height={22}
-              className={cn("text-text-light-01 dark:text-text-dark-03")}
+              className={cn('text-text-light-01 dark:text-text-dark-03')}
             />
           </IconButton>
 
           <IconButton
-            className={cn("bg-default-white dark:bg-text-dark-02 size-11 p-0")}
+            className={cn('bg-default-white dark:bg-text-dark-02 size-11 p-0')}
           >
             <CategoryIcon
               width={22}
               height={22}
-              className={cn("text-text-light-01 dark:text-text-dark-03")}
+              className={cn('text-text-light-01 dark:text-text-dark-03')}
             />
           </IconButton>
         </div>

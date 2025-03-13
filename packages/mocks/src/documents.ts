@@ -1,7 +1,7 @@
-import { faker } from "@faker-js/faker";
-import * as fs from "fs";
+import { faker } from '@faker-js/faker';
+import * as fs from 'fs';
 
-const fileExtensions = ["fig", "sketch", "xd", "pdf"];
+const fileExtensions = ['fig', 'sketch', 'xd', 'pdf'];
 
 const generateDocument = () => {
   const fileName = faker.system.fileName();
@@ -25,12 +25,12 @@ const generateDocumentMockData = (maxDocuments: number) => {
   );
 
   // Create dist directory if it doesn't exist
-  if (!fs.existsSync("./dist")) {
-    fs.mkdirSync("./dist", { recursive: true });
+  if (!fs.existsSync('./dist')) {
+    fs.mkdirSync('./dist', { recursive: true });
   }
 
   fs.writeFile(
-    "./dist/documents.json",
+    './dist/documents.json',
     JSON.stringify(
       {
         data: mockDocuments,
@@ -41,9 +41,9 @@ const generateDocumentMockData = (maxDocuments: number) => {
     ),
     (err) => {
       if (err) {
-        console.error("Error writing file:", err);
+        console.error('Error writing file:', err);
       } else {
-        console.log("Successfully wrote file");
+        console.log('Successfully wrote file');
       }
     }
   );

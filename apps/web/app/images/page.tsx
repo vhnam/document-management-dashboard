@@ -4,6 +4,7 @@ import images from '@repo/mocks/images';
 import ContentManager from '../../src/modules/content-manager';
 import { IconButton } from '@repo/ui/components';
 import NextImage from 'next/image';
+import { getRgbDataURL } from '../../src/utils/file.utils';
 
 export interface Image {
   name: string;
@@ -19,6 +20,8 @@ const renderThumbnail = (image: Image) => (
     height={60}
     alt={image.name}
     className="rounded-full size-[3.75rem] object-cover"
+    placeholder="blur"
+    blurDataURL={getRgbDataURL(114, 136, 250)}
   />
 );
 

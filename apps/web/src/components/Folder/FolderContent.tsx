@@ -1,6 +1,6 @@
 import { Divider } from '@repo/ui/components';
 import { formatLastUpdated } from '../../utils/date.utils';
-import { formatFileSize } from '../../utils/system.utils';
+import { formatFileSize } from '../../utils/file.utils';
 import { FolderProps } from './Folder';
 
 const FolderContent = ({

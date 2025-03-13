@@ -1,21 +1,22 @@
 import * as fs from 'fs';
 import { faker } from '@faker-js/faker';
+import { maxBy } from '@repo/utils/common';
 
 const generateImage = () => {
   const fileName = faker.company.name();
   const fileExtension = '.jpg';
   const fileSize = faker.number.int({
     min: 1,
-    max: 100,
+    max: 10,
   });
   const lastUpdated = faker.date.recent({ days: 30 });
   const link = faker.image.urlPicsumPhotos();
 
   return {
-    name: `${fileName}${fileExtension}`,
     lastUpdated,
     link,
-    size: fileSize,
+    name: `${fileName}${fileExtension}`,
+    size: fileSize * 1000 * 1000, // in MB
   };
 };
 
@@ -35,6 +36,7 @@ const generateImageMockData = (maxImages: number) => {
       {
         data: mockImages,
         total: mockImages.length,
+        lastUpdated: maxBy(mockImages, 'lastUpdated')?.lastUpdated,
       },
       null,
       2
@@ -43,7 +45,7 @@ const generateImageMockData = (maxImages: number) => {
       if (err) {
         console.error('Error writing file:', err);
       } else {
-        console.log('Successfully wrote file');
+        console.log('Successfully wrote Image file');
       }
     }
   );

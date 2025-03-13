@@ -1,7 +1,7 @@
 import { cn } from '@repo/utils/ui';
 import { useContentManager } from './useContentManager';
 import ListItem from '../../components/ListItem';
-import { formatFileSize } from '../../utils/system.utils';
+import { formatFileSize } from '../../utils/file.utils';
 import GridItem from '../../components/GridItem';
 import TopAppBar from '../../components/TopAppBar';
 

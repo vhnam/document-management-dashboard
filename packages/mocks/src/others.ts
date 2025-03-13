@@ -2,27 +2,27 @@ import * as fs from 'fs';
 import { faker } from '@faker-js/faker';
 import { maxBy } from '@repo/utils/common';
 
-const fileExtensions = ['fig', 'sketch', 'xd', 'pdf'];
+const fileExtensions = ['.cc', '.ddr', '.dtf'];
 
-const generateDocument = () => {
+const generateOtherFile = () => {
+  const fileName = faker.book.title();
   const fileExtension = faker.helpers.arrayElement(fileExtensions);
-  const fileName = faker.system.commonFileName(fileExtension);
   const fileSize = faker.number.int({
     min: 1,
-    max: 100,
+    max: 10,
   });
   const lastUpdated = faker.date.recent({ days: 30 });
 
   return {
     lastUpdated,
-    name: fileName,
+    name: `${fileName}${fileExtension}`,
     size: fileSize * 1000 * 1000, // in MB
   };
 };
 
-const generateDocumentMockData = (maxDocuments: number) => {
-  const mockDocuments = Array.from(Array(maxDocuments).keys()).map(() =>
-    generateDocument()
+const generateOtherFileMockData = (maxOtherFiles: number) => {
+  const mockOtherFiles = Array.from(Array(maxOtherFiles).keys()).map(() =>
+    generateOtherFile()
   );
 
   // Create dist directory if it doesn't exist
@@ -31,12 +31,12 @@ const generateDocumentMockData = (maxDocuments: number) => {
   }
 
   fs.writeFile(
-    './dist/documents.json',
+    './dist/others.json',
     JSON.stringify(
       {
-        data: mockDocuments,
-        total: mockDocuments.length,
-        lastUpdated: maxBy(mockDocuments, 'lastUpdated')?.lastUpdated,
+        data: mockOtherFiles,
+        total: mockOtherFiles.length,
+        lastUpdated: maxBy(mockOtherFiles, 'lastUpdated')?.lastUpdated,
       },
       null,
       2
@@ -45,10 +45,10 @@ const generateDocumentMockData = (maxDocuments: number) => {
       if (err) {
         console.error('Error writing file:', err);
       } else {
-        console.log('Successfully wrote Document file');
+        console.log('Successfully wrote Others file');
       }
     }
   );
 };
 
-export default generateDocumentMockData;
+export default generateOtherFileMockData;

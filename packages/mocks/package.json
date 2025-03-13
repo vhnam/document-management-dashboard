@@ -10,7 +10,9 @@
   ],
   "exports": {
     "./documents": "./dist/documents.json",
-    "./images": "./dist/images.json"
+    "./images": "./dist/images.json",
+    "./medias": "./dist/medias.json",
+    "./others": "./dist/others.json"
   },
   "scripts": {
     "build": "npx tsx src/index.ts",

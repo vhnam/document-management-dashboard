@@ -4,7 +4,7 @@ import documents from '@repo/mocks/documents';
 import images from '@repo/mocks/images';
 import { sum, sumBy } from '@repo/utils/common';
 
-import { formatFileSize } from '../../../utils/system.utils';
+import { formatFileSize } from '../../../utils/file.utils';
 import GaugeChart from './GaugeChart';
 
 interface StorageDetails {
@@ -20,7 +20,7 @@ const usedStorage = sum([
 const AvailableStorage = () => {
   const storageDetails: StorageDetails = {
     used: usedStorage,
-    total: 20 * 1024 * 1024,
+    total: 10 * 1000 * 1000 * 1000, // in GB
   };
 
   const percentage = Math.round(

@@ -1,5 +1,7 @@
 import documents from '@repo/mocks/documents';
 import images from '@repo/mocks/images';
+import medias from '@repo/mocks/medias';
+import otherFiles from '@repo/mocks/others';
 import {
   FolderIcon,
   ImageIcon,
@@ -8,7 +10,7 @@ import {
 } from '@repo/ui/components';
 import { ReactNode } from 'react';
 import { Folder, IconWrapper } from '../../../components/Folder';
-import { calculateTotalSize } from '../../../utils/system.utils';
+import { calculateTotalSize } from '../../../utils/file.utils';
 
 interface FolderData {
   name: string;
@@ -24,28 +26,28 @@ const FOLDERS_DATA: FolderData[] = [
     fileSize: calculateTotalSize(documents.data),
     icon: <FolderIcon />,
     backgroundColor: 'bg-accent-red',
-    lastUpdated: new Date(),
+    lastUpdated: new Date(documents.lastUpdated),
   },
   {
     name: 'Images',
     fileSize: calculateTotalSize(images.data),
     icon: <ImageIcon />,
     backgroundColor: 'bg-accent-blue',
-    lastUpdated: new Date(),
+    lastUpdated: new Date(images.lastUpdated),
   },
   {
     name: 'Video, Audio',
-    fileSize: 20,
+    fileSize: calculateTotalSize(medias.data),
     icon: <VideoIcon />,
     backgroundColor: 'bg-accent-green',
-    lastUpdated: new Date(),
+    lastUpdated: new Date(medias.lastUpdated),
   },
   {
     name: 'Others',
-    fileSize: 12,
+    fileSize: calculateTotalSize(otherFiles.data),
     icon: <OtherIcon />,
     backgroundColor: 'bg-accent-pink',
-    lastUpdated: new Date(),
+    lastUpdated: new Date(otherFiles.lastUpdated),
   },
 ];
 

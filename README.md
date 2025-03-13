@@ -23,7 +23,7 @@ cd packages/ui && npm run storybook
 Start Dashboard
 
 ```shell
-cd apps/web && npm run dev
+cd apps/dashboard && npm run dev
 ```
 
 ## What's inside?

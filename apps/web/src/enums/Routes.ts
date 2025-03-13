@@ -1,4 +1,4 @@
-export const enum Routes {
+export enum Routes {
   // auth
   LOGIN = '/auth/login',
   FORGOT_PASSWORD = '/auth/forgot-password',

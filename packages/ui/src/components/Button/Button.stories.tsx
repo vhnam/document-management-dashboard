@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Button, { ButtonProps } from './Button';
 import { DropdownIcon, UploadIcon } from '../Icons';
+import Button, { ButtonProps } from './Button';
 
 const meta = {
   title: 'Components/Button',

@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-const ArrowUpIcon = (props: SVGProps<SVGSVGElement>) => (
+const UserIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -8,16 +8,15 @@ const ArrowUpIcon = (props: SVGProps<SVGSVGElement>) => (
     fill="none"
     {...props}
   >
-    <title>Arrow Up</title>
+    <title>User</title>
     <path
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeMiterlimit={10}
       strokeWidth={1.5}
-      d="M18.07 9.57 12 3.5 5.93 9.57M12 20.5V3.67"
+      d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM20.59 22c0-3.87-3.85-7-8.59-7s-8.59 3.13-8.59 7"
     />
   </svg>
 );
 
-export default ArrowUpIcon;
+export default UserIcon;

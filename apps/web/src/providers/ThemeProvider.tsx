@@ -46,7 +46,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     // Update document class and localStorage when theme changes
     document.documentElement.classList.remove('light', 'dark');
@@ -60,7 +62,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   // Add keyboard shortcut listener
   useEffect(() => {
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'j' && (event.metaKey || event.ctrlKey)) {

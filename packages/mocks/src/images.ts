@@ -1,5 +1,5 @@
-import { faker } from '@faker-js/faker';
 import * as fs from 'fs';
+import { faker } from '@faker-js/faker';
 
 const generateImage = () => {
   const fileName = faker.company.name();

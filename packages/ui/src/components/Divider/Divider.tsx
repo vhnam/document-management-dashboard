@@ -1,5 +1,5 @@
-import { PropsWithChildren } from 'react';
 import { cn } from '@repo/utils/ui';
+import { PropsWithChildren } from 'react';
 
 export interface DividerProps extends PropsWithChildren {
   className?: string;

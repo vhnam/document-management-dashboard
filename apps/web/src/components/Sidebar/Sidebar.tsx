@@ -6,8 +6,8 @@ import {
   VideoIcon,
 } from '@repo/ui/components';
 import Image from 'next/image';
-import Menu from '../Menu';
 import { Routes } from '../../enums/Routes';
+import Menu from '../Menu';
 
 export type SidebarMenuType =
   | 'dashboard'

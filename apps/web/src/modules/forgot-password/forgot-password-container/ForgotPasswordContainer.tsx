@@ -8,9 +8,9 @@ import {
 } from '@repo/ui/components';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { Routes } from '../../../enums/Routes';
 import ForgotPasswordForm from '../forgot-password-form';
 import ForgotPasswordSuccess from '../forgot-password-success';
-import { Routes } from '../../../enums/Routes';
 
 const ForgotPasswordContainer = () => {
   const searchParams = useSearchParams();

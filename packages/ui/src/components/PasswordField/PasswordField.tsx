@@ -1,8 +1,8 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { TextField, TextFieldProps } from '../TextField';
 import { ClosedEyeIcon, OpenedEyeIcon } from '../Icons';
+import { TextField, TextFieldProps } from '../TextField';
 
 export interface PasswordFieldProps extends Omit<TextFieldProps, 'type'> {}
 

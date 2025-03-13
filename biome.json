@@ -1,7 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
   "organizeImports": {
-    "enabled": true
+    "enabled": true,
+    "include": ["**/*.{ts,tsx,js,jsx}"]
   },
   "linter": {
     "enabled": true,
@@ -9,6 +10,10 @@
       "recommended": true,
       "a11y": {
         "useButtonType": "off"
+      },
+      "style": {
+        "useBlockStatements": "error",
+        "useShorthandArrayType": "error"
       }
     }
   },

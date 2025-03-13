@@ -1,6 +1,7 @@
 import { Divider } from '@repo/ui/components';
-import { FolderProps } from './Folder';
 import { formatLastUpdated } from '../../utils/date.utils';
+import { formatFileSize } from '../../utils/system.utils';
+import { FolderProps } from './Folder';
 
 const FolderContent = ({
   fileSize,
@@ -8,7 +9,7 @@ const FolderContent = ({
   lastUpdated,
 }: Omit<FolderProps, 'icon'>) => (
   <div className="absolute inset-0 flex flex-col justify-between text-text-light-01 dark:text-text-dark-03 py-[1.25rem] px-4">
-    <p className="text-right h4">{fileSize}GB</p>
+    <p className="text-right h4">{formatFileSize(fileSize)}</p>
     <strong className="text-center block h5">{name}</strong>
     <Divider />
     <div>

@@ -1,6 +1,6 @@
-import { ThemeProvider } from '../src/providers/ThemeProvider';
 import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
+import { ThemeProvider } from '../src/providers/ThemeProvider';
 
 import '@repo/ui/styles';
 import './globals.css';

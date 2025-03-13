@@ -1,5 +1,5 @@
-import { faker } from '@faker-js/faker';
 import * as fs from 'fs';
+import { faker } from '@faker-js/faker';
 
 const fileExtensions = ['fig', 'sketch', 'xd', 'pdf'];
 

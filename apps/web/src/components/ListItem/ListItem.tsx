@@ -1,7 +1,7 @@
 import { IconButton, OptionIcon } from '@repo/ui/components';
 import Image from 'next/image';
-import { formatLastUpdated } from '../../utils/date.utils';
 import { ReactNode } from 'react';
+import { formatLastUpdated } from '../../utils/date.utils';
 
 export interface ListItemProps {
   name: string;

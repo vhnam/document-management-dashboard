@@ -1,9 +1,4 @@
-import {
-  Button,
-  FacebookIcon,
-  IconButton,
-  TwitterIcon,
-} from '@repo/ui/components';
+import { Button, IconButton } from '@repo/ui/components';
 import Image from 'next/image';
 
 const InviteFriend = () => {
@@ -27,7 +22,7 @@ const InviteFriend = () => {
         <li>
           <IconButton className="bg-default-white dark:bg-default-white/10">
             <Image
-              src="/messenger.webp"
+              src="/logo/messenger.webp"
               width={24}
               height={24}
               alt="Messenger"
@@ -36,18 +31,28 @@ const InviteFriend = () => {
         </li>
         <li>
           <IconButton className="bg-default-white dark:bg-default-white/10">
-            <FacebookIcon />
-          </IconButton>
-        </li>
-        <li>
-          <IconButton className="bg-default-white dark:bg-default-white/10">
-            <TwitterIcon />
+            <Image
+              src="/logo/facebook.webp"
+              width={24}
+              height={24}
+              alt="Facebook"
+            />
           </IconButton>
         </li>
         <li>
           <IconButton className="bg-default-white dark:bg-default-white/10">
             <Image
-              src="/instagram.webp"
+              src="/logo/twitter.webp"
+              width={24}
+              height={24}
+              alt="Twitter"
+            />
+          </IconButton>
+        </li>
+        <li>
+          <IconButton className="bg-default-white dark:bg-default-white/10">
+            <Image
+              src="/logo/instagram.webp"
               width={24}
               height={24}
               alt="Instagram"

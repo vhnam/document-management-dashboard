@@ -1,11 +1,14 @@
+import documents from '@repo/mocks/documents';
+import images from '@repo/mocks/images';
 import {
   FolderIcon,
   ImageIcon,
   OtherIcon,
   VideoIcon,
 } from '@repo/ui/components';
-import { Folder, IconWrapper } from '../../../components/Folder';
 import { ReactNode } from 'react';
+import { Folder, IconWrapper } from '../../../components/Folder';
+import { calculateTotalSize } from '../../../utils/system.utils';
 
 interface FolderData {
   name: string;
@@ -18,14 +21,14 @@ interface FolderData {
 const FOLDERS_DATA: FolderData[] = [
   {
     name: 'Documents',
-    fileSize: 12,
+    fileSize: calculateTotalSize(documents.data),
     icon: <FolderIcon />,
     backgroundColor: 'bg-accent-red',
     lastUpdated: new Date(),
   },
   {
     name: 'Images',
-    fileSize: 20,
+    fileSize: calculateTotalSize(images.data),
     icon: <ImageIcon />,
     backgroundColor: 'bg-accent-blue',
     lastUpdated: new Date(),

@@ -13,12 +13,7 @@ export const Checkbox = ({ label, className, id, ...props }: CheckboxProps) => {
   );
 
   const inputElement = (
-    <input
-      id={id}
-      type="checkbox"
-      className={baseClasses}
-      {...props}
-    />
+    <input id={id} type="checkbox" className={baseClasses} {...props} />
   );
 
   if (!label) {

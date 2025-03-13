@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import { useEffect, useRef } from 'react';
 
 interface FolderShapeProps {
   width: number;
@@ -10,7 +10,9 @@ const FolderShape = ({ width, height }: FolderShapeProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    if (!svgRef.current) return;
+    if (!svgRef.current) {
+      return;
+    }
 
     // Clear any existing content
     d3.select(svgRef.current).selectAll('*').remove();

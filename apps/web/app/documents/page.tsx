@@ -1,9 +1,9 @@
 'use client';
 
+import { sortBy } from '@repo/utils/common';
 import { useMemo, useState } from 'react';
 import ListItem from '../../src/components/ListItem';
 import TopAppBar, { SortField } from '../../src/components/TopAppBar';
-import { sortBy } from '@repo/utils/common';
 
 // @ts-ignore
 import documents from '@repo/mocks/documents';

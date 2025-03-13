@@ -1,16 +1,11 @@
-import {
-  ButtonHTMLAttributes,
-  PropsWithChildren,
-  ReactNode,
-  useMemo,
-} from 'react';
+import type { ButtonHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import { useMemo } from 'react';
 import { cn } from '@repo/utils/ui';
 
 export type ButtonVariant = 'primary' | 'ghost';
 
 export interface ButtonProps
-  extends PropsWithChildren,
-    ButtonHTMLAttributes<HTMLButtonElement> {
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'>, PropsWithChildren {
   disabled?: boolean;
   endAdornment?: ReactNode;
   startAdornment?: ReactNode;
@@ -26,7 +21,7 @@ const buttonVariantStyles = {
     'bg-default-brand/20 dark:bg-default-brand/10 dark:text-default-white/40 shadow-none',
 };
 
-const Button = ({
+export const Button = ({
   children,
   className,
   disabled = false,
@@ -43,17 +38,21 @@ const Button = ({
     [disabled, variant]
   );
 
+  const content = (
+    <>
+      {startAdornment}
+      {children}
+      {endAdornment}
+    </>
+  );
+
   return (
     <button
       {...props}
       className={cn(baseClasses, buttonVariantStyles[baseVariant], className)}
       disabled={disabled}
     >
-      {startAdornment}
-      {children}
-      {endAdornment}
+      {content}
     </button>
   );
 };
-
-export default Button;

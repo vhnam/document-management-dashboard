@@ -25,7 +25,7 @@ const renderThumbnail = (media: Media) => (
       height={24}
       className="w-6 h-6 object-cover"
       placeholder="blur"
-      blurDataURL={getRgbDataURL(114, 136, 250)}
+      blurDataURL={getRgbDataURL()}
     />
   </IconButton>
 );

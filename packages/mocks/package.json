@@ -9,6 +9,7 @@
     "dist/**"
   ],
   "exports": {
+    "./contacts": "./dist/contacts.json",
     "./documents": "./dist/documents.json",
     "./images": "./dist/images.json",
     "./medias": "./dist/medias.json",

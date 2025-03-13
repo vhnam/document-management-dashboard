@@ -66,10 +66,22 @@ const triplet = (e1: number, e2: number, e3: number) =>
   keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
   keyStr.charAt(e3 & 63);
 
-export const getRgbDataURL = (r: number, g: number, b: number) =>
-  `data:image/gif;base64,R0lGODlhAQABAPAA${
-    triplet(0, r, g) + triplet(b, 255, 255)
+type RGBColor = {
+  red: number;
+  green: number;
+  blue: number;
+};
+
+export const getRgbDataURL = (color?: RGBColor) => {
+  const rgbColor = color ?? {
+    red: 114,
+    green: 136,
+    blue: 250,
+  };
+  return `data:image/gif;base64,R0lGODlhAQABAPAA${
+    triplet(0, rgbColor.red, rgbColor.green) + triplet(rgbColor.blue, 255, 255)
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
+};
 
 export const getIcon = (extension: string) => {
   switch (extension) {

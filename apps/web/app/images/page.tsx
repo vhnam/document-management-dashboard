@@ -21,7 +21,7 @@ const renderThumbnail = (image: Image) => (
     alt={image.name}
     className="rounded-full size-[3.75rem] object-cover"
     placeholder="blur"
-    blurDataURL={getRgbDataURL(114, 136, 250)}
+    blurDataURL={getRgbDataURL()}
   />
 );
 

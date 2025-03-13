@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Person } from './ContactList';
+import { getRgbDataURL } from '../../../utils/file.utils';
 
 interface ContactItemProps {
   person: Person;
@@ -14,6 +15,8 @@ const ContactItem = ({ person }: ContactItemProps) => {
         width={44}
         height={44}
         alt={person.name}
+        placeholder="blur"
+        blurDataURL={getRgbDataURL()}
       />
       <div className="flex flex-col gap-1">
         <strong className="subtitle2 dark:text-text-dark-03">

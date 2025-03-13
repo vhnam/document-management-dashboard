@@ -9,6 +9,9 @@ import TopAppBar, { SortField } from '../../src/components/TopAppBar';
 import documents from '@repo/mocks/documents';
 import { IconButton } from '@repo/ui/components';
 import Image from 'next/image';
+import GridItem from '../../src/components/GridItem';
+import { formatFileSize } from '../../src/utils/system.utils';
+import { cn } from '@repo/utils/ui';
 
 export interface Document {
   name: string;
@@ -37,6 +40,7 @@ const getIcon = (extension: string) => {
 
 const DocumentsPage = () => {
   const [isAscending, setIsAscending] = useState(true);
+  const [view, setView] = useState<'list' | 'grid'>('grid');
 
   const sortedDocuments = useMemo(() => {
     const sorted = sortBy(documents.data, 'name');
@@ -45,6 +49,58 @@ const DocumentsPage = () => {
 
   const handleSort = (field: SortField) => {
     setIsAscending(!isAscending);
+  };
+
+  const handleViewChange = (view: 'list' | 'grid') => {
+    setView(view);
+  };
+
+  const renderListItem = (doc: Document) => {
+    return (
+      <ListItem
+        key={`${doc.name}-${doc.lastUpdated}`}
+        name={doc.name}
+        size={formatFileSize(doc.size)}
+        lastUpdated={new Date(doc.lastUpdated)}
+        thumbnail={
+          <IconButton className="bg-default-brand/10 pointer-events-none shadow-none min-w-[40px] shrink-0">
+            <Image
+              src={getIcon(extractExtension(doc.name))}
+              alt={doc.name}
+              width={24}
+              height={24}
+              className="w-6 h-6 object-cover"
+            />
+          </IconButton>
+        }
+      />
+    );
+  };
+
+  const renderGridItem = (doc: Document) => {
+    return (
+      <GridItem
+        key={`${doc.name}-${doc.lastUpdated}`}
+        name={doc.name}
+        size={formatFileSize(doc.size)}
+        lastUpdated={new Date(doc.lastUpdated)}
+        thumbnail={
+          <IconButton className="bg-default-brand/10 pointer-events-none shadow-none min-w-[40px] shrink-0">
+            <Image
+              src={getIcon(extractExtension(doc.name))}
+              alt={doc.name}
+              width={24}
+              height={24}
+              className="w-6 h-6 object-cover"
+            />
+          </IconButton>
+        }
+      />
+    );
+  };
+
+  const renderItem = (doc: Document) => {
+    return view === 'list' ? renderListItem(doc) : renderGridItem(doc);
   };
 
   if (!Array.isArray(documents.data)) {
@@ -62,32 +118,21 @@ const DocumentsPage = () => {
       <div className="mb-9">
         <TopAppBar
           name="Documents"
+          view={view}
           onSort={handleSort}
           sortField="name"
           isAscending={isAscending}
           totalItems={documents.total}
+          onViewChange={handleViewChange}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sortedDocuments.map((doc: Document) => (
-          <ListItem
-            key={`${doc.name}-${doc.lastUpdated}`}
-            name={doc.name}
-            size={`${Math.round(doc.size / 1024)} MB`}
-            lastUpdated={new Date(doc.lastUpdated)}
-            thumbnail={
-              <IconButton className="bg-default-brand/10 pointer-events-none shadow-none min-w-[40px] shrink-0">
-                <Image
-                  src={getIcon(extractExtension(doc.name))}
-                  alt={doc.name}
-                  width={24}
-                  height={24}
-                  className="w-6 h-6 object-cover"
-                />
-              </IconButton>
-            }
-          />
-        ))}
+      <div
+        className={cn(
+          'grid grid-cols-4 gap-6',
+          view === 'list' && 'grid-cols-2'
+        )}
+      >
+        {sortedDocuments.map((doc: Document) => renderItem(doc))}
       </div>
     </div>
   );

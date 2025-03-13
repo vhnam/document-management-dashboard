@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
 import { ThemeProvider } from '../src/providers/ThemeProvider';
 
-import '@repo/ui/styles';
 import './globals.css';
+import '@repo/ui/styles';
 
 export const metadata: Metadata = {
   title: 'Storage',

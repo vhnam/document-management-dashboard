@@ -2,14 +2,13 @@ import {
   Button,
   Checkbox,
   Divider,
-  FacebookIcon,
-  GoogleIcon,
   IconButton,
   PasswordField,
   TextField,
 } from '@repo/ui/components';
 import Link from 'next/link';
 import { Routes } from '../../../src/enums/Routes';
+import Image from 'next/image';
 
 const LoginPage = () => {
   return (
@@ -60,10 +59,20 @@ const LoginPage = () => {
 
           <div className="flex items-center gap-8 justify-center">
             <IconButton className="dark:bg-default-white/10">
-              <FacebookIcon />
+              <Image
+                src="/logo/facebook.webp"
+                width={24}
+                height={24}
+                alt="Facebook"
+              />
             </IconButton>
             <IconButton className="dark:bg-default-white/10">
-              <GoogleIcon />
+              <Image
+                src="/logo/google.webp"
+                width={24}
+                height={24}
+                alt="Google"
+              />
             </IconButton>
           </div>
 

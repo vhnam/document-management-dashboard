@@ -1,16 +1,12 @@
 'use client';
 
-import {
-  Divider,
-  FacebookIcon,
-  GoogleIcon,
-  IconButton,
-} from '@repo/ui/components';
+import { Divider, IconButton } from '@repo/ui/components';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Routes } from '../../../enums/Routes';
 import ForgotPasswordForm from '../forgot-password-form';
 import ForgotPasswordSuccess from '../forgot-password-success';
+import Image from 'next/image';
 
 const ForgotPasswordContainer = () => {
   const searchParams = useSearchParams();
@@ -31,10 +27,20 @@ const ForgotPasswordContainer = () => {
 
           <div className="flex items-center gap-8 justify-center">
             <IconButton className="dark:bg-default-white/10">
-              <FacebookIcon />
+              <Image
+                src="/logo/facebook.webp"
+                width={24}
+                height={24}
+                alt="Facebook"
+              />
             </IconButton>
             <IconButton className="dark:bg-default-white/10">
-              <GoogleIcon />
+              <Image
+                src="/logo/google.webp"
+                width={24}
+                height={24}
+                alt="Google"
+              />
             </IconButton>
           </div>
 

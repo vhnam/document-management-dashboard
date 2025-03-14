@@ -74,9 +74,13 @@ const Sidebar = ({ activeMenu }: SidebarProps) => {
         <Image
           src="/folder.webp"
           alt="Folder"
-          width={253}
-          height={209}
+          width={240}
+          height={240}
           priority
+          style={{
+            width: '15rem',
+            height: '15rem',
+          }}
         />
       </div>
     </aside>

@@ -2,12 +2,12 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import Portal from '../Portal';
 import { Menu, MenuItemProps } from '../Menu';
 import ThemeToggle from '../ThemeToggle';
 import { useTheme } from '../../providers/ThemeProvider';
 import { useRouter } from 'next/navigation';
 import { Routes } from '../../enums/Routes';
+import { Portal } from '@repo/ui/components';
 
 const ProfileMenu = () => {
   const { toggleTheme } = useTheme();

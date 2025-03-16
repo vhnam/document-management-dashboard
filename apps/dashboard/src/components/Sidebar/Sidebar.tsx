@@ -7,9 +7,9 @@ import {
 } from '@repo/ui/components';
 import Image from 'next/image';
 import { Routes } from '../../enums/Routes';
-import Menu from '../Menu';
+import SidebarItem from './SidebarItem';
 
-export type SidebarMenuType =
+export type SidebarItemType =
   | 'dashboard'
   | 'documents'
   | 'images'
@@ -17,57 +17,57 @@ export type SidebarMenuType =
   | 'others';
 
 export interface SidebarProps {
-  activeMenu: SidebarMenuType;
+  activeSidebarItem: SidebarItemType;
 }
 
-const Sidebar = ({ activeMenu }: SidebarProps) => {
+const Sidebar = ({ activeSidebarItem }: SidebarProps) => {
   return (
     <aside className="basis-[20rem] flex flex-col justify-between pb-6">
       <ul className="px-9 flex flex-col gap-3 w-full">
         <li>
-          <Menu
-            active={activeMenu === 'dashboard'}
+          <SidebarItem
+            active={activeSidebarItem === 'dashboard'}
             icon={<DashboardIcon />}
             href={Routes.DASHBOARD}
           >
             Dashboard
-          </Menu>
+          </SidebarItem>
         </li>
         <li>
-          <Menu
-            active={activeMenu === 'documents'}
+          <SidebarItem
+            active={activeSidebarItem === 'documents'}
             icon={<FolderIcon />}
             href={Routes.DOCUMENTS}
           >
             Documents
-          </Menu>
+          </SidebarItem>
         </li>
         <li>
-          <Menu
-            active={activeMenu === 'images'}
+          <SidebarItem
+            active={activeSidebarItem === 'images'}
             icon={<ImageIcon />}
             href={Routes.IMAGES}
           >
             Images
-          </Menu>
+          </SidebarItem>
         </li>
         <li>
-          <Menu
-            active={activeMenu === 'videos'}
+          <SidebarItem
+            active={activeSidebarItem === 'videos'}
             icon={<VideoIcon />}
             href={Routes.VIDEOS}
           >
             Video, Audio
-          </Menu>
+          </SidebarItem>
         </li>
         <li>
-          <Menu
-            active={activeMenu === 'others'}
+          <SidebarItem
+            active={activeSidebarItem === 'others'}
             icon={<OtherIcon />}
             href={Routes.OTHERS}
           >
             Others
-          </Menu>
+          </SidebarItem>
         </li>
       </ul>
       <div className="justify-center flex">

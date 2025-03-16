@@ -1,41 +1,46 @@
-import { cn } from '@repo/utils/ui';
-import Link from 'next/link';
-import { PropsWithChildren, ReactNode } from 'react';
+'use client';
 
-export interface MenuProps extends PropsWithChildren {
-  active?: boolean;
-  icon: ReactNode;
-  href?: string;
+import { cn } from '@repo/utils/ui';
+import MenuItem, { MenuItemProps } from './MenuItem';
+import { useId } from 'react';
+import { uuid } from '@repo/utils/common';
+export interface MenuProps {
+  items?: MenuItemProps[];
+  className?: string;
+  menuItemClassName?: string;
+  onItemClick?: () => void;
 }
 
-const menuStateStyle = {
-  active:
-    'bg-default-brand dark:bg-default-brand text-default-white dark:text-default-white',
-  deactivate:
-    'bg-default-white dark:bg-text-dark-02 text-text-light-01 dark:text-text-dark-03',
-};
+const Menu = ({
+  items = [],
+  className,
+  menuItemClassName,
+  onItemClick,
+}: MenuProps) => {
+  const menuId = useId();
 
-const Menu = ({ active = false, children, icon, href = '#' }: MenuProps) => {
+  if (!items?.length) {
+    return null;
+  }
+
   return (
-    <Link href={href}>
-      <button
-        className={cn(
-          'w-full py-4 px-8 flex items-center gap-[1.125rem] rounded-full',
-          menuStateStyle[active ? 'active' : 'deactivate']
-        )}
-      >
-        <span
-          className={
-            active
-              ? 'text-default-white'
-              : 'text-text-light-01/30 dark:text-text-dark-03/30'
-          }
-        >
-          {icon}
-        </span>
-        {children}
-      </button>
-    </Link>
+    <div
+      className={cn(
+        'py-3 min-w-48 rounded-md shadow-lg bg-white dark:bg-text-dark-02',
+        className
+      )}
+      role="menu"
+      aria-orientation="vertical"
+      aria-labelledby={menuId}
+    >
+      {items.map((item) => (
+        <MenuItem
+          key={`menuItem-${uuid()}`}
+          className={menuItemClassName}
+          {...item}
+        />
+      ))}
+    </div>
   );
 };
 

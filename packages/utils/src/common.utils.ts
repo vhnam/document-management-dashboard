@@ -4,6 +4,8 @@ export { default as sortBy } from 'lodash/sortBy';
 export { default as sum } from 'lodash/sum';
 export { default as sumBy } from 'lodash/sumBy';
 
+export { v7 as uuid } from 'uuid';
+
 export const parseNumber = (
   value: string | number,
   numberType: 'float' | 'int' = 'float'

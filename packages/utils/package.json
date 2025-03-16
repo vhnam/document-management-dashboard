@@ -19,6 +19,7 @@
     "@types/lodash": "^4.17.16",
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
-    "typescript": "5.8.2"
+    "typescript": "5.8.2",
+    "uuid": "^11.1.0"
   }
 }

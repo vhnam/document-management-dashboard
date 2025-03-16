@@ -1,7 +1,7 @@
 import { Button, UploadIcon } from '@repo/ui/components';
-import Image from 'next/image';
 import { Logo } from '../Icons';
 import { SearchField } from '../SearchField';
+import { ProfileMenu } from '../ProfileMenu';
 
 const Header = () => {
   return (
@@ -17,18 +17,7 @@ const Header = () => {
         <Button startAdornment={<UploadIcon className="text-default-white" />}>
           Upload
         </Button>
-        <div className="flex items-center gap-4">
-          <Image
-            src="/avatar.webp"
-            width={48}
-            height={48}
-            alt="Avatar"
-            className="rounded-full"
-          />
-          <p className="h5 text-text-light-01 dark:text-text-dark-03">
-            Mitchel
-          </p>
-        </div>
+        <ProfileMenu />
       </div>
     </header>
   );

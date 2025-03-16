@@ -4,6 +4,7 @@ export * from './Checkbox';
 export * from './Divider';
 export * from './IconButton';
 export * from './Icons';
+export * from './Modal';
 export * from './PasswordField';
 export * from './Portal';
 export * from './TextField';
